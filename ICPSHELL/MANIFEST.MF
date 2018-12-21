@@ -1,2 +1,0 @@
-Main-Class: ICP
-Class-Path: ICP.jar
