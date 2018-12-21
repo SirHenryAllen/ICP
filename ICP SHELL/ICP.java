@@ -1,4 +1,4 @@
-import java.util.Scanner;
+	import java.util.Scanner;
 
 public class ICP {
 
@@ -178,6 +178,28 @@ public class ICP {
   		System.out.println("");
   		return compP;
 	}
+
+
+		public static String[] culture () {
+
+			Scanner in = new Scanner(System.in);
+			String x = "";
+			String[] t = new String[10]; 
+			int y = 0;
+
+			System.out.println("Vous allez maintenant choisir votre culture.");
+			//System.out.println("");
+			x = in.nextLine();
+			System.out.println("Elle vous apportera des bonus aux statistiques de bases ainsi que de nouvelles caractéristiques relatives celle que vous aurez choisi. Il est donc nécessaire de choisir judicieusement votre culture afin que vos compétences soient cohérentes avec votre personnage.");
+			x = in.nextLine();
+			System.out.println("Pour lister les différentes cultures, tappez : 1 \nsinon 0 pour passer");
+			y = in.nextInt();
+			if (y == 1) {
+				System.out.println("SOON");
+			}
+
+			return t;
+		}
 	
 
 	public static void main (String[] args) {
@@ -199,8 +221,14 @@ public class ICP {
 		
 		int[] compB = competencesB(car);
 		System.out.println("Debug = " + (java.util.Arrays.toString(compB)));
-		System.out.println("Debug = OK");
+		
 		System.out.println("");
+		System.out.println("[enter] pour continuer");
+		x = in.nextLine();
+
+		String[] culture = culture();
+		System.out.println("Debug = " + (java.util.Arrays.toString(culture)));
+		System.out.println("Debug = OK");
 
 	}
 
