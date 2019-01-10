@@ -1,7 +1,7 @@
-	import java.util.Scanner;
+import java.util.Scanner;
+
 
 public class ICP {
-
 
 	public static void intro () {
 
@@ -180,11 +180,11 @@ public class ICP {
 	}
 
 
-		public static String[] culture () {
+		public static int[][] culture () {
 
 			Scanner in = new Scanner(System.in);
 			String x = "";
-			String[] t = new String[10]; 
+			int[][] t = new int[10][10]; 
 			int y = 0;
 
 			System.out.println("Vous allez maintenant choisir votre culture.");
@@ -192,10 +192,48 @@ public class ICP {
 			x = in.nextLine();
 			System.out.println("Elle vous apportera des bonus aux statistiques de bases ainsi que de nouvelles caractéristiques relatives celle que vous aurez choisi. Il est donc nécessaire de choisir judicieusement votre culture afin que vos compétences soient cohérentes avec votre personnage.");
 			x = in.nextLine();
-			System.out.println("Pour lister les différentes cultures, tappez : 1 \nsinon 0 pour passer");
+			System.out.println("Pour lister les différentes cultures et leurs caractéristiques, tappez : 1 \nsinon 0 pour passer");
 			y = in.nextInt();
+			
 			if (y == 1) {
 				System.out.println("SOON");
+			}
+
+			System.out.println("");
+			System.out.println("Choisissez maintenant votre culture : ");
+			System.out.println("-----------------------------------------");
+			System.out.println("1 : Culture barbare : ");
+			System.out.println("");
+			System.out.println("2 : Culture citadine : ");
+			System.out.println("");
+			System.out.println("3 : Culture civilisée");
+			System.out.println("");
+			System.out.println("4 : Culture maritime : ");
+			System.out.println("");
+			System.out.println("5 : culture Noble : ");
+			System.out.println("");
+			System.out.println("6 : Culture nomade artique : ");
+			System.out.println("");
+			System.out.println("7 : Culture nomade désertique : ");
+			System.out.println("");
+			System.out.println("8 : Culture nomade tempérée : ");
+			System.out.println("");
+			System.out.println("9 : Culture primitive : ");
+			System.out.println("");
+			System.out.println("10 : Culture rurale : ");
+			System.out.println("");
+			y = in.nextInt();
+
+			if (y == 2) {
+				
+				t[0][0] = 2;
+				t[1][0] = 10;
+				t[1][1] = 10;
+				t[1][2] = 10;
+				t[1][3] = 10;
+
+				System.out.println("Choisir deux à +10% parmis :\n - Canotage\n - Conduire\n - ");
+
 			}
 
 			return t;
@@ -226,9 +264,9 @@ public class ICP {
 		System.out.println("[enter] pour continuer");
 		x = in.nextLine();
 
-		String[] culture = culture();
+/*		int[][] culture = culture();
 		System.out.println("Debug = " + (java.util.Arrays.toString(culture)));
-		System.out.println("Debug = OK");
+		System.out.println("Debug = OK");*/
 
 	}
 
