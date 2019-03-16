@@ -47,7 +47,7 @@ public class Main {
 		System.out.println("Déterminons maintenant ses compétences de base :\n");
 		System.out.println("------------------------------------\n");
 		s = in.nextLine();
-		Competences comB = new Competences (car.getForce(), car.getDexterite(), car.getConstitution(), car.getPouvoir(), car.getIntelligence(), car.getCharisme(), per.getTAI());
+		Competences com = new Competences (car.getForce(), car.getDexterite(), car.getConstitution(), car.getPouvoir(), car.getIntelligence(), car.getCharisme(), per.getTAI());
 
 		s = in.nextLine();
 
@@ -64,6 +64,6 @@ public class Main {
 		System.out.println("------------------------------------\n");
 		s = in.nextLine();	
 
-		Culture cul = new Culture ();
+		Culture cul = new Culture (per, car, com, combat);
 	}
 }

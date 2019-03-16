@@ -89,7 +89,7 @@ public class Competences {
 		return this.acrobatie;
 	} 
 	public double getAthletisme() {
-		return this.acrobatie;
+		return this.athletisme;
 	}
 	public double getCanotage() {
 		return this.canotage;

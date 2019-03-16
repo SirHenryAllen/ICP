@@ -4,6 +4,7 @@ public class Combat {
 	private double hache2M;
 	private double fleau1M;
 	private double fleau2M;
+	private double fronde;
 	private double marteau1M;
 	private double marteau2M;
 	private double epee1M;
@@ -29,6 +30,7 @@ public class Combat {
 		this.hache2M = x;
 		this.fleau1M = x;
 		this.fleau2M = x;
+		this.fronde = x;
 		this.marteau1M = x;
 		this.marteau2M = x;
 		this.epee1M = x;
@@ -75,13 +77,16 @@ public class Combat {
 		return this.hache1M;
 	}
 	public double getHache2M() {
-		return this.hache2M
+		return this.hache2M;
 	}
 	public double getFleau1M() {
-		return this.fleau1M
+		return this.fleau1M;
 	}
 	public double getFleau2M() {
-		return this.fleau2M
+		return this.fleau2M;
+	}
+	public double getFronde() {
+		return this.fronde;
 	}
 	public double getMarteau1M() {
 		return this.marteau1M;
@@ -141,6 +146,9 @@ public class Combat {
 	public void setFleau2M(double x) {
 		this.fleau2M = x;
 	}
+	public void setFronde(double x) {
+		this.fronde = x;
+	}
 	public void setMarteau1M(double x) {
 		this.marteau1M = x;
 	}
@@ -157,7 +165,7 @@ public class Combat {
 		this.dague = x;
 	}
 	public void setArmeHast(double x) {
-		this.armeHast = x
+		this.armeHast = x;
 	}
 	public void setRapiere(double x) {
 		this.rapiere = x;
@@ -181,7 +189,7 @@ public class Combat {
 		this.sarbacanne = x;
 	}
 	public void setLancePierre(double x) {
-		this.lancePierre;
+		this.lancePierre = x;
 	}
 
 }
