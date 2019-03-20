@@ -19,7 +19,7 @@ public class Culture {
 		int y;
 		int antiMarouflage = 0;
 
-		System.out.println("Choisir parmi :\n - 0 : Culture citadine\n - 1 : Culture civilisée\n - 2 : Culture maritime\n - 3 : Culture noble\n - 4 : Culture primitive\n - 5 : Culture rurale\n - 6 : Culture nomade artique\n - 7 : Culture nomade désertique\n - 8 : Culture nomade tempérée\n");
+		System.out.println("Choisir parmi :\n - 0 : Culture citadine\n - 1 : Culture civilisée\n - 2 : Culture maritime\n - 3 : Culture noble\n - 4 : Culture primitive\n - 5 : Culture rurale\n - 6 : Culture nomade arctique\n - 7 : Culture nomade désertique\n - 8 : Culture nomade tempérée\n");
 		x = in.nextInt();
 		switch(x) {
 
