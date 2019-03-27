@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
 public class Caracteristiques {
-	private int force;
-	private int dexterite;
-	private int constitution;
-	private int pouvoir;
-	private int intelligence;
-	private int charisme;
+	private int _force;
+	private int _dexterite;
+	private int _constitution;
+	private int _pouvoir;
+	private int _intelligence;
+	private int _charisme;
 
 	public Caracteristiques () {
 		
@@ -43,7 +43,7 @@ public class Caracteristiques {
 							System.out.println("RAPPEL : Attention à ne pas excéder 95 points ni à être inférieur à 6 dans chaque caractéristique");
 							pts = pts + x;
 						} else {
-							this.force = x;
+							this._force = x;
 							System.out.println("Points restants : " + pts);
 							break;
 						}
@@ -56,7 +56,7 @@ public class Caracteristiques {
 							System.out.println("RAPPEL : Attention à ne pas excéder 95 points ni à être inférieur à 6 dans chaque caractéristique");
 							pts = pts + x;
 						} else {
-							this.dexterite = x;
+							this._dexterite = x;
 							System.out.println("Points restants : " + pts);
 							break;
 						}
@@ -69,7 +69,7 @@ public class Caracteristiques {
 							System.out.println("RAPPEL : Attention à ne pas excéder 95 points ni à être inférieur à 6 dans chaque caractéristique");
 							pts = pts + x;
 						} else {
-							this.constitution = x;
+							this._constitution = x;
 							System.out.println("Points restants : " + pts);
 							break;
 						}
@@ -82,7 +82,7 @@ public class Caracteristiques {
 							System.out.println("RAPPEL : Attention à ne pas excéder 95 points ni à être inférieur à 6 dans chaque caractéristique");
 							pts = pts + x;
 						} else {
-							this.pouvoir = x;
+							this._pouvoir = x;
 							System.out.println("Points restants : " + pts);
 							break;
 						}
@@ -95,7 +95,7 @@ public class Caracteristiques {
 							System.out.println("RAPPEL : Attention à ne pas excéder 95 points ni à être inférieur à 6 dans chaque caractéristique");
 							pts = pts + x;
 						} else {
-							this.intelligence = x;
+							this._intelligence = x;
 							System.out.println("Points restants : " + pts);
 							break;
 						}
@@ -108,7 +108,7 @@ public class Caracteristiques {
 							System.out.println("RAPPEL : Attention à ne pas excéder 95 points ni à être inférieur à 6 dans chaque caractéristique");
 							pts = pts + x;
 						} else {
-							this.charisme = x;
+							this._charisme = x;
 							break;
 						}
 				} break;
@@ -119,47 +119,47 @@ public class Caracteristiques {
 	} 
 
 	public int getForce() {
-		return this.force;
+		return this._force;
 	} 
 	public int getDexterite() {
-		return this.dexterite;
+		return this._dexterite;
 	}
 	public int getConstitution() {
-		return this.constitution;
+		return this._constitution;
 	}
 	public int getPouvoir() {
-		return this.pouvoir;
+		return this._pouvoir;
 	}
 	public int getIntelligence() {
-		return this.intelligence;
+		return this._intelligence;
 	}
 	public int getCharisme() {
-		return this.charisme;
+		return this._charisme;
 	}
 
 	public void setForce (int f) {
-		this.force = f;
+		this._force = f;
 	}
 	public void setDexterite (int d) {
-		this.dexterite = d;
+		this._dexterite = d;
 	}
 	public void setConstitution (int c) {
-		this.constitution = c;
+		this._constitution = c;
 	}
 	public void setPouvoir (int p) {
-		this.pouvoir = p;
+		this._pouvoir = p;
 	}
 	public void setIntelligence (int i) {
-		this.intelligence = i;
+		this._intelligence = i;
 	}
 	public void setCharisme (int c) {
-		this.charisme = c;
+		this._charisme = c;
 	}
 
 	public void affichage () {
 		System.out.println("\n------------------------------------");
-		System.out.println("Récapitulatif caractéristiques :\n");
-		System.out.println("Force = " + this.force + "/100\n" + "Dexterite = " + this.dexterite + "/100\n" + "Constitution = " + this.constitution + "/100\n" + "Pouvoir = " + this.pouvoir + "/100\n" + "intelligence = " + this.intelligence + "/100\n" + "Charisme = " + this.charisme + "/100");
+		System.out.println("Caractéristiques :\n");
+		System.out.println("Force = " + this._force + "/100\n" + "Dexterite = " + this._dexterite + "/100\n" + "Constitution = " + this._constitution + "/100\n" + "Pouvoir = " + this._pouvoir + "/100\n" + "intelligence = " + this._intelligence + "/100\n" + "Charisme = " + this._charisme + "/100");
 		System.out.println("------------------------------------\n");
 	}
 }

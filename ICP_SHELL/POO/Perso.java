@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
 public class Perso {
-	private String nom;
-	private boolean sexe;
-	private int age; 
-	private String race;
-	private int taille;
-	private int poids;
-	private double tai;
+	private String _nom;
+	private boolean _sexe;
+	private int _age; 
+	private String _race;
+	private int _taille;
+	private int _poids;
+	private double _tai;
 
 	public Perso () {
 		
@@ -17,31 +17,31 @@ public class Perso {
 		
 		System.out.print("Comment s'appelle votre personnage ? ");
 		s = in.nextLine();
-		this.nom = s;
+		this._nom = s;
 		
 		System.out.print("Quel est son sexe ? m/f : ");
 		s = in.nextLine();
 		if (s.charAt(0) == 'm') {
-			this.sexe = false;
-		} else { this.sexe = true; }
+			this._sexe = false;
+		} else { this._sexe = true; }
 
 		System.out.print("Quelle est sa race ? ");
 		s = in.nextLine();
-		this.race = s;
+		this._race = s;
 
 		System.out.print("Quel est son age ? ");
 		x = in.nextInt();
-		this.age = x;
+		this._age = x;
 		
 		System.out.print("Quelle est sa taille ? (en cm) : ");
 		x = in.nextInt();
-		this.taille = x;
+		this._taille = x;
 
 		System.out.print("Quelle est son poids ? (en kg) : ");
 		x = in.nextInt();
-		this.poids = x;
+		this._poids = x;
 
-		this.tai = tAI(this.taille, this.poids);
+		this._tai = tAI(this._taille, this._poids);
 
 		affichage();
 
