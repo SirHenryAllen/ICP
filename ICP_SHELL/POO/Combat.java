@@ -1,50 +1,50 @@
 public class Combat {
-	private double mainNue;
-	private double hache1M;
-	private double hache2M;
-	private double fleau1M;
-	private double fleau2M;
-	private double fronde;
-	private double marteau1M;
-	private double marteau2M;
-	private double epee1M;
-	private double epee2M;
-	private double dague;
-	private double armeHast;
-	private double rapiere;
-	private double bouclier;
-	private double lance;
-	private double baton;
-	private double arc;
-	private double arbalete;
-	private double sarbacanne;
-	private double lancePierre;
+	private double _mainNue;
+	private double _hache1M;
+	private double _hache2M;
+	private double _fleau1M;
+	private double _fleau2M;
+	private double _fronde;
+	private double _marteau1M;
+	private double _marteau2M;
+	private double _epee1M;
+	private double _epee2M;
+	private double _dague;
+	private double _armeHast;
+	private double _rapiere;
+	private double _bouclier;
+	private double _lance;
+	private double _baton;
+	private double _arc;
+	private double _arbalete;
+	private double _sarbacanne;
+	private double _lancePierre;
 
 	public Combat (double force, double dexterite) {
 		double x;
-		this.mainNue = force;
+		this._mainNue = force;
 		if (plusFort(force, dexterite) == true) {
 			x = (force/3) + dexterite;
 		} else { x = (dexterite/3) + force; } 
-		this.hache1M = x;
-		this.hache2M = x;
-		this.fleau1M = x;
-		this.fleau2M = x;
-		this.fronde = x;
-		this.marteau1M = x;
-		this.marteau2M = x;
-		this.epee1M = x;
-		this.epee2M = x;
-		this.dague = x;
-		this.armeHast = x;
-		this.rapiere = x;
-		this.bouclier = x;
-		this.lance = x;
-		this.baton = x + 10;
-		this.arc = dexterite;
-		this.arbalete = dexterite;
-		this.sarbacanne = dexterite;
-		this.lancePierre = dexterite;
+		this._hache1M = x;
+		this._hache2M = x;
+		this._fleau1M = x;
+		this._fleau2M = x;
+		this._fronde = x;
+		this._marteau1M = x;
+		this._marteau2M = x;
+		this._epee1M = x;
+		this._epee2M = x;
+		this._dague = x;
+		this._armeHast = x;
+		this._rapiere = x;
+		this._bouclier = x;
+		this._lance = x;
+		this._baton = x + 10;
+		this._arc = dexterite;
+		this._arbalete = dexterite;
+		this._sarbacanne = dexterite;
+		this._lancePierre = dexterite;
 
 		affichage();
 
@@ -60,136 +60,136 @@ public class Combat {
 
 	public void affichage () {
 		System.out.println("\n------------------------------------");
-		System.out.println("Récapitulatif caractéristiques combat :\n");
-		System.out.println("Main nue = " + this.mainNue + "/100\nHache 1M = " + this.hache1M + "/100\nHache 2M = " + this.hache2M + "/100");
-		System.out.println("Fléau 1M = " + this.fleau1M + "/100\nFléau 2M = " + this.fleau2M + "100/\nMarteau 1M = " + this.marteau1M + "/100");
-		System.out.println("Marteau 2M = " + this.marteau2M + "/100\nEpée 1M = " + this.epee1M + "/100\nEpée 2M = " + this.epee2M + "/100");
-		System.out.println("Dague = " + this.dague + "/100\nArme d'hast = " + this.armeHast + "/100\nRapiere = " + this.rapiere + "/100");
-		System.out.println("Bouclier = " + this.bouclier + "/100\nLance = " + this.lance + "/100\nBaton = " + this.baton + "/100");
-		System.out.println("Arc = " + this.arc + "/100\nArbalète = " + this.arbalete + "/100\nSarbacanne = " + this.sarbacanne + "/100\nLance pierre = " + this.lancePierre);
+		System.out.println("Caractéristiques combat :\n");
+		System.out.println("Main nue = " + this._mainNue + "/100\nHache 1M = " + this._hache1M + "/100\nHache 2M = " + this._hache2M + "/100");
+		System.out.println("Fléau 1M = " + this._fleau1M + "/100\nFléau 2M = " + this._fleau2M + "100/\nMarteau 1M = " + this._marteau1M + "/100");
+		System.out.println("Marteau 2M = " + this._marteau2M + "/100\nEpée 1M = " + this._epee1M + "/100\nEpée 2M = " + this._epee2M + "/100");
+		System.out.println("Dague = " + this._dague + "/100\nArme d'hast = " + this._armeHast + "/100\nRapiere = " + this._rapiere + "/100");
+		System.out.println("Bouclier = " + this._bouclier + "/100\nLance = " + this._lance + "/100\nBaton = " + this._baton + "/100");
+		System.out.println("Arc = " + this._arc + "/100\nArbalète = " + this._arbalete + "/100\nSarbacanne = " + this._sarbacanne + "/100\nLance pierre = " + this.lancePierre);
 		System.out.println("\n------------------------------------");
 	}
 
 	public double getMainNue() {
-		return this.mainNue;
+		return this._mainNue;
 	}
 	public double getHache1M() {
-		return this.hache1M;
+		return this._hache1M;
 	}
 	public double getHache2M() {
-		return this.hache2M;
+		return this._hache2M;
 	}
 	public double getFleau1M() {
-		return this.fleau1M;
+		return this._fleau1M;
 	}
 	public double getFleau2M() {
-		return this.fleau2M;
+		return this._fleau2M;
 	}
 	public double getFronde() {
-		return this.fronde;
+		return this._fronde;
 	}
 	public double getMarteau1M() {
-		return this.marteau1M;
+		return this._marteau1M;
 	}
 	public double getMarteau2M() {
-		return this.marteau2M;
+		return this._marteau2M;
 	}
 	public double getEpee1M() {
-		return this.epee1M;
+		return this._epee1M;
 	}
 	public double getEpee2M() {
-		return this.epee2M;
+		return this._epee2M;
 	}
 	public double getDague() {
-		return this.dague;
+		return this._dague;
 	}
 	public double getArmeHast() {
-		return this.armeHast;
+		return this._armeHast;
 	}
 	public double getRapiere() {
-		return this.rapiere;
+		return this._rapiere;
 	}
 	public double getBouclier() {
-		return this.bouclier;
+		return this._bouclier;
 	}
 	public double getLance() {
-		return this.lance;
+		return this._lance;
 	}
 	public double getBaton() {
-		return this.baton;
+		return this._baton;
 	}
 	public double getArc() {
-		return this.arc;
+		return this._arc;
 	}
 	public double getArbalete() {
-		return this.arbalete;
+		return this._arbalete;
 	}
 	public double getSarbacanne() {
-		return this.sarbacanne;
+		return this._sarbacanne;
 	}
 	public double getLancePierre() {
-		return this.lancePierre;
+		return this._lancePierre;
 	}
 
 	public void setMainNue(double x) {
-		this.mainNue = x;
+		this._mainNue = x;
 	}
 	public void setHache1M(double x) {
-		this.hache1M = x;
+		this._hache1M = x;
 	}
 	public void setHache2M(double x) {
-		this.hache2M = x;
+		this._hache2M = x;
 	}
 	public void setFleau1M(double x) {
-		this.fleau1M = x;
+		this._fleau1M = x;
 	}
 	public void setFleau2M(double x) {
-		this.fleau2M = x;
+		this._fleau2M = x;
 	}
 	public void setFronde(double x) {
-		this.fronde = x;
+		this._fronde = x;
 	}
 	public void setMarteau1M(double x) {
-		this.marteau1M = x;
+		this._marteau1M = x;
 	}
 	public void setMarteau2M(double x) {
-		this.marteau2M = x;
+		this._marteau2M = x;
 	}
 	public void setEpee1M(double x) {
-		this.epee1M = x;
+		this._epee1M = x;
 	}
 	public void setEpee2M(double x) {
-		this.epee2M = x;
+		this._epee2M = x;
 	}
 	public void setDague(double x) {
-		this.dague = x;
+		this._dague = x;
 	}
 	public void setArmeHast(double x) {
-		this.armeHast = x;
+		this._armeHast = x;
 	}
 	public void setRapiere(double x) {
-		this.rapiere = x;
+		this._rapiere = x;
 	}
 	public void setBouclier(double x) {
-		this.bouclier = x;
+		this._bouclier = x;
 	}
 	public void setLance(double x) {
-		this.lance = x;
+		this._lance = x;
 	}
 	public void setBaton(double x) {
-		this.baton = x;
+		this._baton = x;
 	}
 	public void setArc(double x) {
-		this.arc = x;
+		this._arc = x;
 	}
 	public void setArbalete(double x) {
-		this.arbalete = x;
+		this._arbalete = x;
 	}
 	public void setSarbacanne(double x) {
-		this.sarbacanne = x;
+		this._sarbacanne = x;
 	}
 	public void setLancePierre(double x) {
-		this.lancePierre = x;
+		this._lancePierre = x;
 	}
 
 }
