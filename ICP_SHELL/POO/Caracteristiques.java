@@ -26,7 +26,7 @@ public class Caracteristiques {
 
 		while (check == 0) {
 			if (pts < 6) {
-				if (charisme != 0) {
+				if (_charisme != 0) {
 					break;
 				} else {
 					System.out.println("Oups, plus de points :/ - On recommence...");

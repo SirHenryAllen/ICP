@@ -48,44 +48,44 @@ public class Perso {
 	}
 
 	public String getNom() {
-		return this.nom;
+		return this._nom;
 	}
 	public boolean getSexe() {
-		return this.sexe;
+		return this._sexe;
 	}
 	public int getAge() {
-		return this.age;
+		return this._age;
 	}
 	public String getRace() {
-		return this.race;
+		return this._race;
 	}
 	public int getTaille() {
-		return this.taille;
+		return this._taille;
 	}
 	public int getPoids() {
-		return this.poids;
+		return this._poids;
 	}
 	public double getTAI() {
-		return this.tai;
+		return this._tai;
 	}
 
 /*	public void setNom (String n) {
-		this.nom = n;
+		this._nom = n;
 	}
 	public void setSexe (boolean s) {
-		this.sexe = s;
+		this._sexe = s;
 	}
 	public void setAge (int a) {
-		this.age = a;
+		this._age = a;
 	}
 	public void setRace (int r) {
-		this.race = r;
+		this._race = r;
 	}
 	public void setTaille (int t) {
-		this.taille = t;
+		this._taille = t;
 	}
 	public void setPoids (int p) {
-		this.poids = p;
+		this._poids = p;
 	}*/
 
 	public double tAI (double t, double p) {
@@ -97,7 +97,7 @@ public class Perso {
 		
 		String s;
 
-		if (this.sexe == true) {
+		if (this._sexe == true) {
 			s = "femelle";
 		} else {
 			s = "male";
@@ -105,7 +105,7 @@ public class Perso {
 
 		System.out.println("\n------------------------------------");
 		System.out.println("\nRécapitulatif de votre personnage : ");
-		System.out.println("\nNom : " + this.nom + "\nSexe : " + s + "\nRace : " + this.race + "\nAge : " + this.age + " ans\nPoids : " + this.poids + " kg\nTaille : " + this.taille + " cm\n");
+		System.out.println("\nNom : " + this._nom + "\nSexe : " + s + "\nRace : " + this._race + "\nAge : " + this._age + " ans\nPoids : " + this._poids + " kg\nTaille : " + this._taille + " cm\n");
 		System.out.println("------------------------------------\n");
 	}
 }

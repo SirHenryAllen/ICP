@@ -19,7 +19,7 @@ public class Competences {
 	private double _persuasion;
 	private double _resistance;
 	private double _influence;
-	private double _intimidation
+	private double _intimidation;
 
 	public Competences (double force, double dexterite, double constitution, double pouvoir, double intelligence, double charisme, double tai) {
 		
@@ -77,7 +77,7 @@ public class Competences {
 		System.out.println("canotage = " + this._canotage + "\nChant = " + this._chant + "\nConduite = " + this._conduite);
 		System.out.println("connaissance des Animaux = " + this._connaissanceAnimaux + "\nConnaissance des Plantes = " + this._connaissancePlantes);
 		System.out.println("connaissance du Monde = " + this._connaissanceMonde + "\nDiscretion = " + this._discretion);
-		System.out.println("escamotage = " + this._escamotage + "\nEquitation = " + this._equitation + "\nEsquive" + this._esquive);
+		System.out.println("escamotage = " + this._escamotage + "\nEquitation = " + this._equitation + "\nEsquive = " + this._esquive);
 		System.out.println("evaluation = " + this._evaluation + "\nLancer = " + this._lancer + "\nPerception = " + this._perception);
 		System.out.println("persistence = " + this._persistence + "\nPersuasion = " + this._persuasion + "\nResistance = " + this._resistance);
 		System.out.println("\n------------------------------------\n");		

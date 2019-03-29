@@ -147,8 +147,8 @@ public class Culture {
 				switch(y) {
 					case 0: this._com.setCanotage(this._com.getCanotage() + 10); System.out.println("Niveau en canotage = " + this._com.getCanotage() + "/100"); antiMarouflage++; break;
 					case 1: this._com.setEsquive(this._com.getEsquive() + 10); System.out.println("Niveau en esquive = " + this._com.getEsquive() + "/100"); antiMarouflage++; break;
-					case 2: this._com.setConduite(this._com.getConduite() + 10); System.out.pritnln("Niveau en conduite = " + this._com.getConduite() + "/100"); antiMarouflage++; break;
-					case 3: this._com.setPSoin(this._com.getPSoin() + 10); System.out.println("Niveau en premiers soins = " + this._com.getPSoin() + "/100"); antiMarouflage++; break;
+					case 2: this._com.setConduite(this._com.getConduite() + 10); System.out.println("Niveau en conduite = " + this._com.getConduite() + "/100"); antiMarouflage++; break;
+					case 3: this._com.setPSoins(this._com.getPSoin() + 10); System.out.println("Niveau en premiers soins = " + this._com.getPSoin() + "/100"); antiMarouflage++; break;
 					case 4: this._com.setPersistence(this._com.getPersistence() + 10); System.out.println("Niveau en persistence = " + this._com.getPersistence() + "/100"); antiMarouflage++; break;
 				}
 			}
@@ -162,8 +162,8 @@ public class Culture {
 					case 2: this._combat.setDague(this._combat.getDague() + 10); System.out.println("Niveau en dague = " + this._combat.getDague() + "/100"); antiMarouflage++; break;
 					case 3: this._combat.setFleau1M(this._combat.getFleau1M() + 10); System.out.println("Niveau en fléau à une main = " + this._combat.getFleau1M() + "/100"); antiMarouflage++; break;
 					case 5: this._combat.setFronde(this._combat.getFronde() + 10); System.out.println("Niveau en fronde = " + this._combat.getFronde() + "/100"); antiMarouflage++; break;
-					case 6: this._combat.setHache1M(this._combat.getHache1M() + 10); System.out.println("Niveau en hache à une main = " this._combat.getHache1M() + "/100"); antiMarouflage++; break;
-					case 7: this._combat.setHache2M(this._combat.getHache2M() + 10); System.out.println("Niveau en hache à deux mains = " this._combat.getHache2M() + "/100"); antiMarouflage++; break;
+					case 6: this._combat.setHache1M(this._combat.getHache1M() + 10); System.out.println("Niveau en hache à une main = " + this._combat.getHache1M() + "/100"); antiMarouflage++; break;
+					case 7: this._combat.setHache2M(this._combat.getHache2M() + 10); System.out.println("Niveau en hache à deux mains = " + this._combat.getHache2M() + "/100"); antiMarouflage++; break;
 					case 8: this._combat.setLance(this._combat.getLance() + 10); System.out.println("Niveau en lance = " + this._combat.getLance() + "/100"); antiMarouflage++; break;
 					case 9: this._combat.setMarteau1M(this._combat.getMarteau1M() + 10); System.out.println("Niveau en marteau à une main = " + this._combat.getMarteau1M() + "/100"); antiMarouflage++; break;
 				}
@@ -200,9 +200,26 @@ public class Culture {
 			while (antiMarouflage < 2) {
 				y = in.nextInt();
 				switch(y) {
-					
+					case 0: this._combat.setArc(this._combat.getArc() + 15); System.out.println("Niveau en arc = " + this._combat.getArc() + "/100"); antiMarouflage++; break;
+					case 1: this._combat.setBouclier(this._combat.getBouclier() + 15); System.out.println("Niveau en bouclier = " + this._combat.getBouclier()); antiMarouflage++; break;
+					case 2: this._combat.setDague(this._combat.getDague() + 15); System.out.println("Niveau en dague = " + this._combat.getDague() + "/100");
+					case 3: this._combat.setEpee1M(this._combat.getEpee1M() + 15); System.out.println("Niveau en épée à une main = " + this._combat.getEpee1M() + "/100"); antiMarouflage++; break;
+					case 4: this._combat.setHache1M(this._combat.getHache1M() + 15); System.out.println("Niveau en hache à une main = " + this._combat.getHache1M() + "/100"); antiMarouflage++; break;
 				}
 			}
+			antiMarouflage = 0;
+			System.out.println("######################################");
+			break;
+
+			case 8: System.out.println("\nVous avez choisi la culture nomade tempérée\n");
+			System.out.println("Bonus de + 5% en :\n - Connaissance des animaux\n - Connaissance des plantes\n - Connaissance du monde\n - Discretion\n - Perception\n");
+			this._com.setConnaissanceAnimaux(this._com.getConnaissanceAnimaux() + 5); this._com.setConnaissancePlantes(this._com.getConnaissancePlantes() + 5); this._com.setConnaissanceMonde(this._com.getConnaissanceMonde() + 5); this._com.setDiscretion(this._com.getDiscretion() + 5); this._com.setPerception(this._com.getPerception() + 5);
+			System.out.println("Bonus de + 15% en :\n - Athlétisme");
+			this._com.setAthletisme(this._com.getAthletisme() + 15);
+			System.out.println("Bonus de + 20% en :\n - Equitation\n ");
+			this._com.setEquitation(this._com.getEquitation() + 20);
+			System.out.println("######################################");
+			break;
 		}
 	}
 }

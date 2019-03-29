@@ -66,7 +66,7 @@ public class Combat {
 		System.out.println("Marteau 2M = " + this._marteau2M + "/100\nEpée 1M = " + this._epee1M + "/100\nEpée 2M = " + this._epee2M + "/100");
 		System.out.println("Dague = " + this._dague + "/100\nArme d'hast = " + this._armeHast + "/100\nRapiere = " + this._rapiere + "/100");
 		System.out.println("Bouclier = " + this._bouclier + "/100\nLance = " + this._lance + "/100\nBaton = " + this._baton + "/100");
-		System.out.println("Arc = " + this._arc + "/100\nArbalète = " + this._arbalete + "/100\nSarbacanne = " + this._sarbacanne + "/100\nLance pierre = " + this.lancePierre);
+		System.out.println("Arc = " + this._arc + "/100\nArbalète = " + this._arbalete + "/100\nSarbacanne = " + this._sarbacanne + "/100\nLance pierre = " + this._lancePierre);
 		System.out.println("\n------------------------------------");
 	}
 
