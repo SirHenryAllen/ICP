@@ -1,4 +1,4 @@
-public class Combat {
+	public class Combat {
 	private double _mainNue;
 	private double _hache1M;
 	private double _hache2M;

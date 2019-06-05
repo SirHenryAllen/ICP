@@ -63,7 +63,20 @@ public class Main {
 		System.out.println("Vous allez maintenant sélectionner la culture de votre personnage :\n");
 		System.out.println("------------------------------------\n");
 		s = in.nextLine();	
-
 		Culture cul = new Culture (per, car, com, combat);
+
+		s = in.nextLine();
+
+		/*
+		System.out.println("------------------------------------\n");
+		System.out.println("Vous allez maintenant sélectionner la profession de votre personnage :\n");
+		System.out.println("------------------------------------\n");
+		s = in.nextLine();	
+		Profession prof = new Profession (per, car, com, combat, cul);
+
+		Recap.affichage(prof, per, car, com, combat, cul);
+		*/
+
+		//cul.compAAffichage();
 	}
 }

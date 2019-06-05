@@ -104,7 +104,7 @@ public class Perso {
 		}
 
 		System.out.println("\n------------------------------------");
-		System.out.println("\nRécapitulatif de votre personnage : ");
+		System.out.println("\nVotre personnage : ");
 		System.out.println("\nNom : " + this._nom + "\nSexe : " + s + "\nRace : " + this._race + "\nAge : " + this._age + " ans\nPoids : " + this._poids + " kg\nTaille : " + this._taille + " cm\n");
 		System.out.println("------------------------------------\n");
 	}
