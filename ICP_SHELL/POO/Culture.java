@@ -5,6 +5,7 @@ public class Culture {
 	private Caracteristiques _car;
 	private Competences _com;
 	private Combat _combat;
+	private static CompetencesAvancees saveComp;
 
 	public Culture (Perso per, Caracteristiques car, Competences com, Combat combat) {
 
@@ -15,6 +16,7 @@ public class Culture {
 
 		Scanner in = new Scanner (System.in);
 		String s;
+		String culture = "";
 		int x;
 		int y;
 		int antiMarouflage = 0;
@@ -23,11 +25,11 @@ public class Culture {
 		x = in.nextInt();
 		switch(x) {
 
-			case 0: System.out.println("\n######################################\nVous avez choisi la culture citadine\n");
+			case 0: System.out.println("\n######################################\nVous avez choisi la culture citadine\n"); culture = "citadine";
 			System.out.println("Bonus de + 10% en :\n - Connaissance du Monde\n - Evaluation\n - Influence\n"); //Culture citadine
 			this._com.setConnaissanceMonde(this._com.getConnaissanceMonde() + 10); this._com.setEvaluation(this._com.getEvaluation() + 10); this._com.setInfluence(this._com.getInfluence() + 10);
 			s = in.nextLine();
-			System.out.println("Choisir 2 à + 10% parmi :\n - 0 : Canotage\n - 1 : Conduite\n - 2 : Discretion\n - 3 : Athétisme\n - 4 : Escamotage\n - 5 : Persistence\n");
+			System.out.println("Choisir 2 bonus aux compétences à + 10% parmi :\n - 0 : Canotage\n - 1 : Conduite\n - 2 : Discretion\n - 3 : Athétisme\n - 4 : Escamotage\n - 5 : Persistence\n");
 			while (antiMarouflage < 2) {
 				y = in.nextInt();
 				switch(y) {
@@ -40,7 +42,7 @@ public class Culture {
 				}
 			}
 			antiMarouflage = 0;
-			System.out.println("Choisir 2 à + 10% parmi :\n - 0 : Arbalète\n - 1 : Armes d'hast\n - 2 : Bouclier\n - 3 : Dague\n - 4 : Epée une main\n - 5 : Marteau à une main\n");
+			System.out.println("Choisir 2 bonus aux compétences à + 10% parmi :\n - 0 : Arbalète\n - 1 : Armes d'hast\n - 2 : Bouclier\n - 3 : Dague\n - 4 : Epée une main\n - 5 : Marteau à une main\n");
 			while(antiMarouflage < 2) {
 				y = in.nextInt();
 				switch(y) {
@@ -53,13 +55,16 @@ public class Culture {
 				}
 			}
 			antiMarouflage = 0;
+			System.out.println("Choix des compétences avancées :\n");
+			CompetencesAvancees compA = new CompetencesAvancees(0);
+			saveComp = compA;
 			System.out.println("######################################");
 			break;
 
-			case 1: System.out.println("\nVous avez choisi la culture civilisée\n");
+			case 1: System.out.println("\nVous avez choisi la culture civilisée\n"); culture = "civilisée";
 			System.out.println("Bonus de + 10% en :\n - Connaissance du Monde\nBonus de + 15% en :\n - Evaluation\n - Influence\n"); //Culture civilisée
 			this._com.setConnaissanceMonde(this._com.getConnaissanceMonde() + 10); this._com.setEvaluation(this._com.getEvaluation() + 15); this._com.setInfluence(this._com.getInfluence() + 15);
-			System.out.println("\nVeuillez choisir 2 à + 10 % parmi :\n - 0 : Arbalète\n - 1 : Rapiere\n");
+			System.out.println("\nVeuillez choisir 2 bonus aux compétences à + 10 % parmi :\n - 0 : Arbalète\n - 1 : Rapiere\n");
 			while (antiMarouflage < 2) {
 				y = in.nextInt();
 				switch(y) {
@@ -68,16 +73,19 @@ public class Culture {
 				}
 			}
 			antiMarouflage = 0;
+			System.out.println("Choix des compétences avancées :\n");
+			compA = new CompetencesAvancees(1);
+			saveComp = compA;
 			System.out.println("######################################");
 			break;
 
-			case 2: System.out.println("\nVous avez choisi la culture maritime\n");
+			case 2: System.out.println("\nVous avez choisi la culture maritime\n"); culture = "maritime";
 			System.out.println("Bonus de + 5% en :\n - Acrobatie\n - Chant\n - Connaissance des animaux\n - Esquive\n - Lancé\n");
 			this._com.setAcrobatie(this._com.getAcrobatie() + 5); this._com.setChant(this._com.getChant() + 5); this._com.setConnaissanceAnimaux(this._com.getConnaissanceAnimaux() + 5); this._com.setEsquive(this._com.getEsquive() + 10); this._com.setLancer(this._com.getLancer() + 10);
 			System.out.println("Bonus de + 10% en :\n - Athétisme\n - Connaissance du monde\n");
 			this._com.setAthletisme(this._com.getAthletisme() + 10); this._com.setConnaissanceMonde(this._com.getConnaissanceMonde() + 10);
 			System.out.println("Bonus de + 15% en :\n - Canotage\n");
-			System.out.println("Veuillez choisir 2 à + 10% parmi :\n - 0 : Main nue\n - 1 : Dague\n - 2 : Epée à une main\n - 3 : Marteau à une main\n");
+			System.out.println("Veuillez choisir 2 bonus aux compétences à + 10% parmi :\n - 0 : Main nue\n - 1 : Dague\n - 2 : Epée à une main\n - 3 : Marteau à une main\n");
 			while (antiMarouflage < 2) {
 				y = in.nextInt();
 				switch(y) {
@@ -88,13 +96,16 @@ public class Culture {
 				}
 			}
 			antiMarouflage = 0;
+			System.out.println("Choix des compétences avancées :\n");
+			compA = new CompetencesAvancees(2);
+			saveComp = compA;
 			System.out.println("######################################");
 			break;
 
-			case 3: System.out.println("\nVous avez choisi la culture noble\n");
+			case 3: System.out.println("\nVous avez choisi la culture noble\n"); culture = "noble";
 			System.out.println("Bonus de + 10% en :\n - Connaissance du monde\n - Influence\n - Persistence\n");
 			this._com.setConnaissanceMonde(this._com.getConnaissanceMonde() + 10); this._com.setInfluence(this._com.getInfluence() + 10); this._com.setPersistence(this._com.getPersistence() + 10);
-			System.out.println("\nVeuillez choisir 2 à + 5% parmi :\n - 0 : Equitation\n - 1 : Esquive\n - 2 : Evaluation\n - 3 : Perception\n");
+			System.out.println("\nVeuillez choisir 2 bonus aux compétences à + 5% parmi :\n - 0 : Equitation\n - 1 : Esquive\n - 2 : Evaluation\n - 3 : Perception\n");
 			while(antiMarouflage < 2) {
 				y = in.nextInt();
 				switch(y) {
@@ -105,7 +116,7 @@ public class Culture {
 				}
 			}
 			antiMarouflage = 0;
-			System.out.println("\nVeuillez choisir 2 à + 15% parmi :\n - 0 : Bouclier\n - 1 : Dague\n - 2 : Epée à une main\n - 3 : Epée à deux mains\n - 4 : Rapière\n");
+			System.out.println("\nVeuillez choisir 2 bonus aux compétences à + 15% parmi :\n - 0 : Bouclier\n - 1 : Dague\n - 2 : Epée à une main\n - 3 : Epée à deux mains\n - 4 : Rapière\n");
 			while(antiMarouflage < 2) {
 				y = in.nextInt();
 				switch(y) {
@@ -117,13 +128,16 @@ public class Culture {
 				}
 			}
 			antiMarouflage = 0;
+			System.out.println("Choix des compétences avancées :\n");
+			compA = new CompetencesAvancees(3);
+			saveComp = compA;
 			System.out.println("######################################");
 			break;
 
-			case 4: System.out.println("\nVous avez choisi la culture primitive\n");
+			case 4: System.out.println("\nVous avez choisi la culture primitive\n"); culture = "primitive";
 			System.out.println("Bonus de + 10% en :\n - Athétisme\n - Connaissance des animaux\n - Connaissance des plantes\n - discrétion\n - Endurance\n - Perception\n");
 			this._com.setAthletisme(this._com.getAthletisme() + 10); this._com.setConnaissanceAnimaux(this._com.getConnaissanceAnimaux() + 10); this._com.setConnaissancePlantes(this._com.getConnaissancePlantes() + 10); this._com.setDiscretion(this._com.getDiscretion() + 10); this._com.setAthletisme(this._com.getAthletisme() + 10); this._com.setPerception(this._com.getPerception() + 10);
-			System.out.println("\nChoisir 1 à + 10% parmi :\n - 0 : Dague\n - 1 : Fronde\n - 2 : Hache à une main\n - 3 : Lance\n - 4 : Marteau à une main\n");
+			System.out.println("\nChoisir 1 bonus aux compétences à + 10% parmi :\n - 0 : Dague\n - 1 : Fronde\n - 2 : Hache à une main\n - 3 : Lance\n - 4 : Marteau à une main\n");
 			while (antiMarouflage < 1) {
 				y = in.nextInt();
 				switch(y) {
@@ -135,13 +149,16 @@ public class Culture {
 				}
 			}
 			antiMarouflage = 0;
+			System.out.println("Choix des compétences avancées :\n");
+			compA = new CompetencesAvancees(4);
+			saveComp = compA;
 			System.out.println("######################################");
 			break;
 
-			case 5: System.out.println("\nVous avez choisi la culture rurale\n");
+			case 5: System.out.println("\nVous avez choisi la culture rurale\n"); culture = "rurale";
 			System.out.println("Bonus de + 10% en :\n - Athétisme\n - Connaissance des animaux\n - Connaissance des plantes\n");
 			this._com.setAthletisme(this._com.getAthletisme() + 10); this._com.setConnaissanceAnimaux(this._com.getConnaissanceAnimaux() + 10); this._com.setConnaissancePlantes(this._com.getConnaissancePlantes() + 10);
-			System.out.println("\nChoisir 2 à + 10% parmi :\n - 0 : Canotage\n - 1 : Esquive\n - 2 : conduite\n - 3 : Premiers soins\n - 4 : Persistence");
+			System.out.println("\nChoisir 2 bonus aux compétences à + 10% parmi :\n - 0 : Canotage\n - 1 : Esquive\n - 2 : conduite\n - 3 : Premiers soins\n - 4 : Persistence");
 			while (antiMarouflage < 2) {
 				y = in.nextInt();
 				switch(y) {
@@ -153,7 +170,7 @@ public class Culture {
 				}
 			}
 			antiMarouflage = 0;
-			System.out.println("choisir 2 à + 10% parmi :\n - Mains nues \n - Bâton\n - Dague\n - Fléau à une main\n - Fronde\n - Hache à une main\n - Hache à deux mains\n - Lance\n - Marteau à une main\n");
+			System.out.println("choisir 2 bonus aux compétences à + 10% parmi :\n - Mains nues \n - Bâton\n - Dague\n - Fléau à une main\n - Fronde\n - Hache à une main\n - Hache à deux mains\n - Lance\n - Marteau à une main\n");
 			while (antiMarouflage < 2) {
 				y = in.nextInt();
 				switch(y) {
@@ -169,15 +186,18 @@ public class Culture {
 				}
 			} 
 			antiMarouflage = 0;
+			System.out.println("Choix des compétences avancées :\n");
+			compA = new CompetencesAvancees(5);
+			saveComp = compA;
 			System.out.println("######################################");
 			break;
 
-			case 6: System.out.println("\nVous avez choisi la culture nomade arctique\n");
+			case 6: System.out.println("\nVous avez choisi la culture nomade artique\n"); culture = "nomade artique";
 			System.out.println("Bonus de + 5% en :\n - Athétisme\n - Connaissance des animaux\n - Discretion\n - Perception\n");
 			this._com.setAthletisme(this._com.getAthletisme() + 5); this._com.setConnaissanceAnimaux(this._com.getConnaissanceAnimaux() + 5); this._com.setDiscretion(this._com.getDiscretion() + 5); this._com.setPerception(this._com.getPerception() + 5);
 			System.out.println("Bonus de + 10% en :\n - Canotage\n - Athletisme\n");
 			this._com.setCanotage(this._com.getCanotage() + 10); this._com.setAthletisme(this._com.getAthletisme() + 10);
-			System.out.println("\nChoisir 2 à + 15% parmi :\n - 0 : Dague \n - 1 : Hache à une main\n - 2 : Lance\n - 3 : Marteau à une main\n");
+			System.out.println("\nChoisir 2 bonus aux compétences à + 15% parmi :\n - 0 : Dague \n - 1 : Hache à une main\n - 2 : Lance\n - 3 : Marteau à une main\n");
 			while (antiMarouflage < 2) {
 				y = in.nextInt();
 				switch(y) {
@@ -188,15 +208,18 @@ public class Culture {
 				}
 			}
 			antiMarouflage = 0;
+			System.out.println("Choix des compétences avancées :\n");
+			compA = new CompetencesAvancees(6);
+			saveComp = compA;
 			System.out.println("######################################");
 			break;
 
-			case 7: System.out.println("\nVous avez choisi la culture nomade désertique\n");
+			case 7: System.out.println("\nVous avez choisi la culture nomade désertique\n"); culture = "nomade désertique";
 			System.out.println("Bonus de + 5% en :\n - Athlétisme\n - Connaissance du monde\n - Discrétion\n - Perception\n");
 			this._com.setAthletisme(this._com.getAthletisme() + 5); this._com.setConnaissanceMonde(this._com.getConnaissanceMonde() + 5); this._com.setDiscretion(this._com.getDiscretion() + 5); this._com.setPerception(this._com.getPerception() + 5);
 			System.out.println("Bonus de + 10% en :\n - Equitation\n - Athlétisme\n");
 			this._com.setEquitation(this._com.getEquitation() + 10); this._com.setAthletisme(this._com.getAthletisme() + 10);
-			System.out.println("Choisir 2 à + 15% parmi :\n - 0 : Arc\n - 1 : Bouclier\n - 2 : Dague\n - 3 : Epée à une main\n - 4 : Hache à une main\n");
+			System.out.println("Choisir 2 bonus aux compétences à + 15% parmi :\n - 0 : Arc\n - 1 : Bouclier\n - 2 : Dague\n - 3 : Epée à une main\n - 4 : Hache à une main\n");
 			while (antiMarouflage < 2) {
 				y = in.nextInt();
 				switch(y) {
@@ -208,18 +231,28 @@ public class Culture {
 				}
 			}
 			antiMarouflage = 0;
+			System.out.println("Choix des compétences avancées :\n");
+			compA = new CompetencesAvancees(7);
+			saveComp = compA;
 			System.out.println("######################################");
 			break;
 
-			case 8: System.out.println("\nVous avez choisi la culture nomade tempérée\n");
+			case 8: System.out.println("\nVous avez choisi la culture nomade tempérée\n"); culture = "nomade tempérée";
 			System.out.println("Bonus de + 5% en :\n - Connaissance des animaux\n - Connaissance des plantes\n - Connaissance du monde\n - Discretion\n - Perception\n");
 			this._com.setConnaissanceAnimaux(this._com.getConnaissanceAnimaux() + 5); this._com.setConnaissancePlantes(this._com.getConnaissancePlantes() + 5); this._com.setConnaissanceMonde(this._com.getConnaissanceMonde() + 5); this._com.setDiscretion(this._com.getDiscretion() + 5); this._com.setPerception(this._com.getPerception() + 5);
 			System.out.println("Bonus de + 15% en :\n - Athlétisme");
 			this._com.setAthletisme(this._com.getAthletisme() + 15);
 			System.out.println("Bonus de + 20% en :\n - Equitation\n ");
 			this._com.setEquitation(this._com.getEquitation() + 20);
+			System.out.println("Choix des compétences avancées :\n");
+			compA = new CompetencesAvancees(8);
+			saveComp = compA;
 			System.out.println("######################################");
 			break;
 		}
+	}
+
+	public void compAAffichage() {
+		saveComp.affichage();
 	}
 }

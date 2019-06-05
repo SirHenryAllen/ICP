@@ -47,7 +47,11 @@ public class Competences {
 		if (plusFort(force, dexterite) == true) {
 			x = (force/3) + dexterite;
 		} else { x = (dexterite/3) + force; } 
-		this._lancer = x;
+		this._lancer = x; 
+		if (plusFort(intelligence, pouvoir) == true) {
+			x = (intelligence/3) + pouvoir;
+		} else { x = (pouvoir/3) + intelligence; }
+		this._perception = x;
 		this._persistence = 10 + pouvoir;
 		if (plusFort(intelligence, charisme) == true) {
 			x = (intelligence/3) + charisme;
@@ -72,7 +76,7 @@ public class Competences {
 
 	public void affichage() {
 		System.out.println("\n------------------------------------");
-		System.out.println("Compétences de base :\n");
+		System.out.println("Compétences :\n");
 		System.out.println("Premiers soins = " + this._pSoins + "\nAcrobatie = " + this._acrobatie + "\nAthlétisme = " + this._athletisme);
 		System.out.println("canotage = " + this._canotage + "\nChant = " + this._chant + "\nConduite = " + this._conduite);
 		System.out.println("connaissance des Animaux = " + this._connaissanceAnimaux + "\nConnaissance des Plantes = " + this._connaissancePlantes);
