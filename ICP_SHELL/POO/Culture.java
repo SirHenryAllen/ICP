@@ -55,6 +55,7 @@ public class Culture {
 				}
 			}
 			antiMarouflage = 0;
+			System.out.println("\n######################################\n");
 			System.out.println("Choix des compétences avancées :\n");
 			CompetencesAvancees compA = new CompetencesAvancees(0);
 			saveComp = compA;
@@ -73,6 +74,7 @@ public class Culture {
 				}
 			}
 			antiMarouflage = 0;
+			System.out.println("\n######################################\n");
 			System.out.println("Choix des compétences avancées :\n");
 			compA = new CompetencesAvancees(1);
 			saveComp = compA;
@@ -96,6 +98,7 @@ public class Culture {
 				}
 			}
 			antiMarouflage = 0;
+			System.out.println("\n######################################\n");
 			System.out.println("Choix des compétences avancées :\n");
 			compA = new CompetencesAvancees(2);
 			saveComp = compA;
@@ -128,6 +131,7 @@ public class Culture {
 				}
 			}
 			antiMarouflage = 0;
+			System.out.println("\n######################################\n");
 			System.out.println("Choix des compétences avancées :\n");
 			compA = new CompetencesAvancees(3);
 			saveComp = compA;
@@ -149,6 +153,7 @@ public class Culture {
 				}
 			}
 			antiMarouflage = 0;
+			System.out.println("\n######################################\n");
 			System.out.println("Choix des compétences avancées :\n");
 			compA = new CompetencesAvancees(4);
 			saveComp = compA;
@@ -186,6 +191,7 @@ public class Culture {
 				}
 			} 
 			antiMarouflage = 0;
+			System.out.println("\n######################################\n");
 			System.out.println("Choix des compétences avancées :\n");
 			compA = new CompetencesAvancees(5);
 			saveComp = compA;
@@ -208,6 +214,7 @@ public class Culture {
 				}
 			}
 			antiMarouflage = 0;
+			System.out.println("\n######################################\n");
 			System.out.println("Choix des compétences avancées :\n");
 			compA = new CompetencesAvancees(6);
 			saveComp = compA;
@@ -231,6 +238,7 @@ public class Culture {
 				}
 			}
 			antiMarouflage = 0;
+			System.out.println("\n######################################\n");
 			System.out.println("Choix des compétences avancées :\n");
 			compA = new CompetencesAvancees(7);
 			saveComp = compA;
